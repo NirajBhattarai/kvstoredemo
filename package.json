@@ -1,0 +1,51 @@
+{
+  "name": "@openagent/kvstore",
+  "version": "1.0.0",
+  "description": "Persistent decentralised key-value storage for AI agents, built on the 0G Storage Network",
+  "keywords": ["0g", "storage", "kv", "decentralised", "agent", "digital-twin", "web3"],
+  "license": "MIT",
+  "author": "OpenAgent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openagent/kvstore"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "examples",
+    ".env.example",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "example": "ts-node examples/digital-twin.ts",
+    "test": "ts-node examples/digital-twin.ts",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@0gfoundation/0g-ts-sdk": "^1.2.6",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

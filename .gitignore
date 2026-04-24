@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment secrets — NEVER commit real keys
+.env
+
+# Temporary files
+*.tmp
+tmp/
+
+# Editor
+.DS_Store
+.idea/
+.vscode/settings.json
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
